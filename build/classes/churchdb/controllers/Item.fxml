@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="churchdb.controllers.HomeController">
+   <children>
+      <Pane fx:id="pnlHome" prefHeight="576.0" prefWidth="1056.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane layoutX="256.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+               <children>
+                  <Pane fx:id="pnlEditEvent" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleClose" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem111111" layoutX="582.0" layoutY="40.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem111111" layoutX="57.0" layoutY="25.0" text="Edit Event" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="741.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnCloseEditEvent" fitHeight="26.0" fitWidth="46.0" layoutX="760.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniEditEvent" fitHeight="26.0" fitWidth="46.0" layoutX="723.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="296.0" layoutY="99.0" prefHeight="27.0" prefWidth="85.0" text="Event Name" textFill="#e8e0e0" />
+                        <Button layoutX="451.0" layoutY="363.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" stylesheets="@fullpackstyling.css" text="Button" />
+                        <ImageView fitHeight="172.0" fitWidth="215.0" layoutX="63.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Schedule_100px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField layoutX="295.0" layoutY="139.0" prefHeight="34.0" prefWidth="275.0" />
+                        <DatePicker layoutX="294.0" layoutY="294.0" prefHeight="34.0" prefWidth="277.0" />
+                        <TextField layoutX="295.0" layoutY="214.0" prefHeight="34.0" prefWidth="275.0" />
+                        <Label layoutX="296.0" layoutY="261.0" prefHeight="27.0" prefWidth="85.0" text="Event Name" textFill="#e8e0e0" />
+                        <Label layoutX="296.0" layoutY="179.0" prefHeight="27.0" prefWidth="85.0" text="Event Name" textFill="#e8e0e0" />
+                        <Button layoutX="55.0" layoutY="487.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" stylesheets="@fullpackstyling.css" text="Button" />
+                        <Button layoutX="317.0" layoutY="363.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" stylesheets="@fullpackstyling.css" text="Button" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAddMember" layoutX="10.0" layoutY="10.0" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem111" layoutX="596.0" layoutY="14.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem111" layoutX="57.0" layoutY="25.0" text="Add New Member" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="753.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="65.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_User_96px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtAddMemFname" layoutX="308.0" layoutY="123.0" prefHeight="35.0" prefWidth="299.0" style="-fx-border-color: red;" text="First Name" />
+                        <DatePicker fx:id="txtAddMemDOB" layoutX="468.0" layoutY="364.0" prefHeight="34.0" prefWidth="150.0" promptText="Date Of  Birth" style="-fx-border-color: red;" />
+                        <Button fx:id="btnAddMemCan" layoutX="479.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #FF552A;" stylesheets="@fullpackstyling.css" text="CANCEL">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="308.0" layoutY="94.0" prefHeight="20.0" prefWidth="85.0" text="First Name" textFill="#fff7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddMemLname" layoutX="308.0" layoutY="202.0" prefHeight="35.0" prefWidth="299.0" style="-fx-border-color: red;" text="Last Name" />
+                        <TextField fx:id="txtAddMemEmail" layoutX="308.0" layoutY="282.0" prefHeight="35.0" prefWidth="299.0" style="-fx-border-color: red;" text="Email" />
+                        <TextField fx:id="txtAddMemGender" layoutX="308.0" layoutY="363.0" prefHeight="35.0" prefWidth="137.0" style="-fx-border-color: red;" text="Gender" />
+                        <Label layoutX="308.0" layoutY="172.0" prefHeight="20.0" prefWidth="85.0" text="Last Name" textFill="#fff7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="308.0" layoutY="247.0" prefHeight="20.0" prefWidth="85.0" text="Email" textFill="#fff7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="308.0" layoutY="332.0" prefHeight="20.0" prefWidth="85.0" text="Gender" textFill="#fff7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="470.0" layoutY="332.0" prefHeight="20.0" prefWidth="85.0" text="Date Of Birth" textFill="#fff7f7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddMemAdd" layoutX="332.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #55D4FF;" stylesheets="@fullpackstyling.css" text="ADD">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAddMemBack" layoutX="79.0" layoutY="505.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="34.0" prefWidth="122.0" style="-fx-background-color: #2AFFAA;" stylesheets="@fullpackstyling.css" text="BACK">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lbAddMemMessage" layoutX="304.0" layoutY="52.0" prefHeight="26.0" prefWidth="289.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlEditMember" layoutX="10.0" layoutY="10.0" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem1111" layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem1111" layoutX="57.0" layoutY="25.0" text="Edit Member Details" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="111.0" fitWidth="200.0" layoutX="71.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_User_96px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtEditMemFname" layoutX="291.0" layoutY="114.0" prefHeight="42.0" prefWidth="312.0" style="-fx-border-color: #FF0000;" stylesheets="@fullpackstyling.css" />
+                        <Button fx:id="btnEditMemCan" layoutX="452.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="93.0" style="-fx-background-color: red;" stylesheets="@fullpackstyling.css" text="CANCEL" textFill="#d3c4c4" />
+                        <Label layoutX="291.0" layoutY="89.0" prefHeight="17.0" prefWidth="75.0" text="First Name" textFill="WHITE" />
+                        <Label layoutX="291.0" layoutY="172.0" prefHeight="17.0" prefWidth="75.0" text="Last Name" textFill="WHITE" />
+                        <TextField fx:id="txtEditMemLname" layoutX="291.0" layoutY="200.0" prefHeight="42.0" prefWidth="312.0" style="-fx-border-color: #FF0000;" stylesheets="@fullpackstyling.css" />
+                        <Label layoutX="291.0" layoutY="255.0" prefHeight="17.0" prefWidth="75.0" text="Email" textFill="WHITE" />
+                        <TextField fx:id="txtEditMemLname" layoutX="291.0" layoutY="282.0" prefHeight="42.0" prefWidth="312.0" style="-fx-border-color: #FF0000;" stylesheets="@fullpackstyling.css" />
+                        <DatePicker fx:id="txtEditMemDOB" layoutX="435.0" layoutY="361.0" prefHeight="42.0" prefWidth="174.0" style="-fx-border-color: #FF0000;" stylesheets="@fullpackstyling.css" />
+                        <Label layoutX="450.0" layoutY="335.0" prefHeight="17.0" prefWidth="75.0" text="Date Of Birth" textFill="WHITE" />
+                        <TextField fx:id="txtEditMemGender" layoutX="291.0" layoutY="361.0" prefHeight="42.0" prefWidth="137.0" style="-fx-border-color: #FF0000;" stylesheets="@fullpackstyling.css" />
+                        <Label layoutX="291.0" layoutY="335.0" prefHeight="17.0" prefWidth="75.0" text="Gender" textFill="WHITE" />
+                        <Button fx:id="btnEditMemBack" layoutX="64.0" layoutY="505.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="93.0" style="-fx-background-color: #00FF7F;" stylesheets="@fullpackstyling.css" text="Back" />
+                        <Button fx:id="btnEditMemSave" layoutX="320.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="93.0" style="-fx-background-color: #557FFF;" stylesheets="@fullpackstyling.css" text="SAVE" textFill="#e4dddd" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAddEvent" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleClose" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem11111" layoutX="596.0" layoutY="25.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem11111" layoutX="57.0" layoutY="25.0" text="Add Event" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker fx:id="txtAddEventDate" layoutX="310.0" layoutY="271.0" prefHeight="34.0" prefWidth="358.0" promptText="Date" style="-fx-border-color: RED;" stylesheets="@fullpackstyling.css" />
+                        <TextField fx:id="txtAddEventName" layoutX="310.0" layoutY="111.0" prefHeight="34.0" prefWidth="358.0" style="-fx-border-color: RED;" stylesheets="@fullpackstyling.css" text="Name" />
+                        <TextArea fx:id="txtAddEventDesc" layoutX="310.0" layoutY="362.0" prefHeight="136.0" prefWidth="358.0" style="-fx-border-color: RED;" stylesheets="@fullpackstyling.css" text="Description" />
+                        <Button fx:id="btnAddEventCancel" layoutX="510.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #FF0000;" stylesheets="@fullpackstyling.css" text="CANCEL" />
+                        <ImageView fitHeight="189.0" fitWidth="200.0" layoutX="57.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Planner_100px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtAddEventAgenda" layoutX="310.0" layoutY="190.0" prefHeight="34.0" prefWidth="358.0" style="-fx-border-color: RED;" stylesheets="@fullpackstyling.css" text="Agenda" />
+                        <Label layoutX="310.0" layoutY="74.0" prefHeight="27.0" prefWidth="122.0" text="Event Name" textFill="#ebeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="310.0" layoutY="157.0" prefHeight="27.0" prefWidth="122.0" text="Event Agenda" textFill="#ebeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="310.0" layoutY="235.0" prefHeight="27.0" prefWidth="122.0" text="Event Date" textFill="#ebeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="310.0" layoutY="320.0" prefHeight="27.0" prefWidth="122.0" text="Event Description" textFill="#ebeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddEventSave" layoutX="344.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #7FFFFF;" stylesheets="@fullpackstyling.css" text="SAVE" />
+                        <Button fx:id="btnAddEventBack" layoutX="24.0" layoutY="524.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #00FF7F;" stylesheets="@fullpackstyling.css" text="BACK" />
+                        <Label fx:id="lbAddEventMessage" layoutX="344.0" layoutY="39.0" prefHeight="27.0" prefWidth="201.0" textFill="#ebeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlEvent" layoutX="10.0" layoutY="10.0" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem2" layoutX="596.0" layoutY="12.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem2" layoutX="57.0" layoutY="25.0" text="Events" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="31.0" layoutY="138.0" prefHeight="42.0" prefWidth="712.0" spacing="80.0" style="-fx-background-color: #02030A;">
+                           <children>
+                              <Label text="Event" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Date" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Agenda" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label layoutX="274.0" layoutY="23.0" text="Days Left" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="14.0" layoutY="188.0" prefHeight="364.0" prefWidth="746.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlEventContent" prefHeight="399.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnAddEvent" alignment="BASELINE_LEFT" contentDisplay="CENTER" graphicTextGap="22.0" layoutX="458.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: #FF5555;" text="Add Event" textFill="#220202">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="467.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Plus_50px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  
+                                                                        <Pane fx:id="pnlMembers" prefHeight="576.0" prefWidth="808.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem" layoutX="596.0" layoutY="25.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem" layoutX="57.0" layoutY="25.0" text="Members" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="444.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNum" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Members" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbMale" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Male" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbFemale" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Female" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="178.0" prefHeight="42.0" prefWidth="712.0" spacing="80.0" style="-fx-background-color: #02030A;">
+                           <children>
+                              <Label text="Name" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Gender" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="75.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Date Of Birth" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnIMember" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnAddMember" alignment="BASELINE_LEFT" contentDisplay="CENTER" graphicTextGap="22.0" layoutX="630.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="53.0" prefWidth="149.0" style="-fx-background-color: #FF5555;" text="Add Member" textFill="#220202">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="647.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Plus_50px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAttend" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleClose" prefHeight="554.0" prefWidth="793.0" stylesheets="@style.css">
+                     <children>
+                        <TextField layoutX="596.0" layoutY="26.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbPage" layoutX="57.0" layoutY="25.0" text="Attendence" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="444.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumAttend" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Members" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbPresent" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Present" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbAbsent" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Absent" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="178.0" prefHeight="42.0" prefWidth="712.0" spacing="80.0" style="-fx-background-color: #02030A;">
+                           <children>
+                              <Label text="Name" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="44.0" text="Date" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Check Attendace" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnIAttends" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlBtn" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <VBox prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlDashBoard" layoutX="10.0" layoutY="10.0" prefHeight="554.0" prefWidth="793.0">
+                     <children>
+                        <TextField fx:id="fdSearchMem1" layoutX="602.0" layoutY="29.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                        <Label fx:id="lbMem1" layoutX="57.0" layoutY="25.0" text="DASHBOARD" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="444.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumDash" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Members" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbMaleDash" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Male" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbFemaleDash" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Female" textFill="#e7e5e5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="763.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Search_52px.png" />
+                           </image>
+                        </ImageView>
+                        <ScrollPane layoutX="24.0" layoutY="198.0" prefHeight="364.0" prefWidth="746.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlDash" prefHeight="363.0" prefWidth="763.0" style="-fx-background-color: #02030A;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-7.0" layoutY="164.0" prefHeight="27.0" prefWidth="761.0" style="-fx-background-color: #02030A;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="First Name" textFill="#e8e3e3">
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="89.0" text="Last Name" textFill="#e8e3e3">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Email" textFill="#e8e3e3">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="152.0" layoutY="10.0" prefHeight="17.0" prefWidth="61.0" text="Gender" textFill="#e8e3e3">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_User_96px.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Dashboard" textFill="#2c2525">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Dashboard_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnMembers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Members">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Leadership_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnAttend" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Attendance">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Attendance_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnEvents" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Events">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Schedule_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnSettings1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Minimize">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Minimize_Window_52px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Sign_Out_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pnlLogin" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: yellow;">
+         <children>
+            <VBox fillWidth="false" prefHeight="700.0" prefWidth="1300.0">
+               <children>
+                  <GridPane prefHeight="700.0" prefWidth="1300.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="760.0" minWidth="10.0" prefWidth="525.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="533.0" minWidth="10.0" prefWidth="525.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1">
+                           <children>
+                               <TextField fx:id="txtUsername" layoutX="156.0" layoutY="182.0" prefHeight="34.0" prefWidth="275.0" promptText="Username " />
+                <PasswordField fx:id="txtPassword" layoutX="156.0" layoutY="249.0" prefHeight="34.0" prefWidth="275.0" promptText="password" stylesheets="@fullpackstyling.css" />
+                <Button fx:id="btnSignin" layoutX="283.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="34.0" prefWidth="137.0" stylesheets="@fullpackstyling.css" text="Sign in" />
+                <Label fx:id="btnForgot" alignment="CENTER" layoutX="170.0" layoutY="310.0" prefHeight="23.0" prefWidth="93.0" text="Forgot Password" textFill="#5383ff">
+                    <font>
+                        <Font name="Segoe UI" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lbError" alignment="CENTER" layoutX="156.0" layoutY="149.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+                    <font>
+                        <Font name="Segoe UI" size="10.0" />
+                    </font>
+                </Label>
+                              <Label fx:id="btnForgot1" alignment="CENTER" layoutX="207.0" layoutY="95.0" prefHeight="42.0" prefWidth="149.0" text="LOGIN" textFill="#141517">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="btnForgot11" alignment="CENTER" layoutX="39.0" layoutY="188.0" prefHeight="23.0" prefWidth="93.0" text="Username" textFill="#5383ff">
+                                 <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="btnForgot111" alignment="CENTER" layoutX="39.0" layoutY="255.0" prefHeight="23.0" prefWidth="93.0" text="Password" textFill="#5383ff">
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="btnCloseLogin" fitHeight="38.0" fitWidth="34.0" layoutX="477.0" layoutY="6.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/close.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="btnMiniLogin" fitHeight="38.0" fitWidth="34.0" layoutX="443.0" layoutY="6.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/mini1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #007FFF;">
+                           <children>
+                              <ImageView fitHeight="180.0" fitWidth="308.0" layoutX="100.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/grap.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="144.0" layoutY="271.0" prefHeight="70.0" prefWidth="233.0" text="Church Of Chirst " textFill="#fcf6f6">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="144.0" layoutY="347.0" prefHeight="70.0" prefWidth="248.0" text="Church Management&#10; System" textFill="#fcf6f6">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

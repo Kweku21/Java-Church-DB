@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="churchdb.controllers.HomeController">
+   <children>
+      <Pane fx:id="pnlLogin" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <VBox fillWidth="false" prefHeight="750.0" prefWidth="1300.0">
+               <children>
+                  <GridPane prefHeight="750.0" prefWidth="1300.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="760.0" minWidth="10.0" prefWidth="689.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="604.0" minWidth="10.0" prefWidth="604.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1">
+                           <children>
+                               <TextField fx:id="txtUsername" layoutX="185.0" layoutY="306.0" prefHeight="34.0" prefWidth="275.0" promptText="Username " />
+                <PasswordField fx:id="txtPassword" layoutX="185.0" layoutY="373.0" prefHeight="34.0" prefWidth="275.0" promptText="password" stylesheets="@fullpackstyling.css" />
+                <Button fx:id="btnSignin" layoutX="312.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="34.0" prefWidth="137.0" stylesheets="@fullpackstyling.css" text="Sign in" />
+                <Label fx:id="lbError" alignment="CENTER" layoutX="185.0" layoutY="273.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+                    <font>
+                        <Font name="Segoe UI" size="10.0" />
+                    </font>
+                </Label>
+                              <Label fx:id="btnForgot1" alignment="CENTER" layoutX="236.0" layoutY="219.0" prefHeight="42.0" prefWidth="149.0" text="LOGIN" textFill="#141517">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="btnForgot11" alignment="CENTER" layoutX="68.0" layoutY="312.0" prefHeight="23.0" prefWidth="93.0" text="Username" textFill="#5383ff">
+                                 <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="btnForgot111" alignment="CENTER" layoutX="68.0" layoutY="379.0" prefHeight="23.0" prefWidth="93.0" text="Password" textFill="#5383ff">
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="btnCloseLogin" fitHeight="38.0" fitWidth="34.0" layoutX="564.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/close.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="btnMiniLogin" fitHeight="38.0" fitWidth="34.0" layoutX="523.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/mini1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #007FFF;">
+                           <children>
+                              <ImageView fitHeight="217.0" fitWidth="225.0" layoutX="148.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../church.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="144.0" layoutY="271.0" prefHeight="70.0" prefWidth="233.0" text="Church Of Chirst " textFill="#fcf6f6">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="49.0" layoutY="356.0" prefHeight="70.0" prefWidth="437.0" text="Church Management System" textFill="#fcf6f6">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pnlHomePage" prefHeight="576.0" prefWidth="1056.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane layoutX="256.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #02030A;">
+               <children>
+                  <Pane fx:id="pnlBtn" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <VBox prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlCheck" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem131" layoutX="57.0" layoutY="25.0" text="Check Attendance" textFill="#e7e5e5">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="1.0" layoutY="100.0" prefHeight="647.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="vBoxCheck" prefHeight="663.0" prefWidth="1040.0" style="-fx-background-color: #02030A;">
+                                 <children>
+                                    <TableView prefHeight="621.0" prefWidth="1040.0" style="-fx-background-color: #02030A;">
+                                      <columns>
+                                        <TableColumn prefWidth="126.0" />
+                                        <TableColumn minWidth="0.0" prefWidth="291.0" text="Name" />
+                                          <TableColumn prefWidth="251.0" text="Date" />
+                                          <TableColumn prefWidth="251.0" text="Zone" />
+                                          <TableColumn minWidth="0.0" prefWidth="102.0" text="check" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fx:id="btnCloseCheck" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniCheck" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAbsentPage" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem1321" layoutX="57.0" layoutY="25.0" text="Absent Members" textFill="#1b0101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="1.0" layoutY="137.0" prefHeight="610.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlAbsent" prefHeight="595.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-2.0" layoutY="100.0" prefHeight="42.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#170000">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="110.0" right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="89.0" text="Date" textFill="#170000">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Zone" textFill="#1e0101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnCloseAbsent" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniAbsent" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlZoneMem" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem112" layoutX="57.0" layoutY="25.0" text="Zone Members" textFill="#220101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="459.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumZone" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Zone Members" textFill="#220101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbMalZone" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Male" textFill="#220101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbFemaleZone" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Female" textFill="#220101" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="1.0" layoutY="214.0" prefHeight="533.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="vBoxZone" prefHeight="537.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-7.0" layoutY="164.0" prefHeight="42.0" prefWidth="1047.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#220101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="110.0" right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Location" textFill="#220101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="152.0" layoutY="10.0" prefHeight="17.0" prefWidth="61.0" text="Gender" textFill="#220101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="671.0" layoutY="10.0" prefHeight="30.0" prefWidth="82.0" text="Telephone" textFill="#0d0000">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="150.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnCloseZone" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniZone" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlZone" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem11" layoutX="41.0" layoutY="14.0" text="Add Zone" textFill="#170101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="btnCloseAddZone" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniAddZone" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbMem113" layoutX="47.0" layoutY="77.0" prefHeight="35.0" prefWidth="116.0" text="Name" textFill="#170101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbMem1131" layoutX="47.0" layoutY="145.0" prefHeight="35.0" prefWidth="129.0" text="Agenda" textFill="#170101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbMem11311" layoutX="47.0" layoutY="228.0" prefHeight="35.0" prefWidth="129.0" text="Motto" textFill="#170101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtZone" layoutX="211.0" layoutY="76.0" prefHeight="47.0" prefWidth="482.0" />
+                        <TextField fx:id="txtZoneAgenda" layoutX="211.0" layoutY="144.0" prefHeight="47.0" prefWidth="482.0" />
+                        <TextField fx:id="txtZoneMotto" layoutX="211.0" layoutY="227.0" prefHeight="48.0" prefWidth="482.0" />
+                        <Label fx:id="lbMem113111" layoutX="41.0" layoutY="314.0" prefHeight="35.0" prefWidth="129.0" text="Description" textFill="#250303">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtZoneDesc" layoutX="210.0" layoutY="314.0" prefHeight="285.0" prefWidth="482.0" />
+                        <Label fx:id="lbAddZoneError" layoutX="314.0" layoutY="38.0" prefHeight="23.0" prefWidth="275.0" />
+                        <Button fx:id="btnAddZoneAddNew" layoutX="210.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="55.0" prefWidth="204.0" text="ADD ZONE" textFill="#0eaac3">
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlPresentPage" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem132" layoutX="57.0" layoutY="25.0" text="Present Members" textFill="#220202">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="1.0" layoutY="137.0" prefHeight="610.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlPresent" prefHeight="595.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-2.0" layoutY="100.0" prefHeight="42.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#220202">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="110.0" right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="89.0" text="Date" textFill="#220202">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Zone" textFill="#220101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnClosePresent" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniPresent" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlZones" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem1121" layoutX="57.0" layoutY="25.0" text="Church Zones" textFill="#1e0202">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="459.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumZone1" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Number Of Zones" textFill="#1e0202" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="1.0" layoutY="214.0" prefHeight="533.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="vBoxZones" prefHeight="537.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-7.0" layoutY="164.0" prefHeight="42.0" prefWidth="1047.0" spacing="200.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#250101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="170.0" right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="30.0" prefWidth="172.0" text="Number Of Members" textFill="#110000">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnCloseZones" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniZones" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnZonesAdd" layoutX="804.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="37.0" prefWidth="160.0" text="ADD ZONE">
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAttendance" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem13" layoutX="57.0" layoutY="25.0" text="Attendance" textFill="#280101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="459.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumAttendence" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Members" textFill="#280101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbPresentAttendence" onMouseClicked="#handleClose" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Present" textFill="#280101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbAbsentAttendence" onMouseClicked="#handleClose" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Absent" textFill="#280101" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="1.0" layoutY="214.0" prefHeight="533.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlDash1" prefHeight="537.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-7.0" layoutY="164.0" prefHeight="42.0" prefWidth="1047.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#280101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="110.0" right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="89.0" text="Date" textFill="#280101">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Zone" textFill="#250202">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnCloseAttend" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniAttend" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnAttendStart" layoutX="794.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="168.0" text="Check Attendance">
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlDashBoard" layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem1" layoutX="57.0" layoutY="25.0" text="DASHBOARD" textFill="#110101">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="459.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbNumDash" text="22000" textFill="#2a73ff">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Members" textFill="#110101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbMaleDash" text="100" textFill="#26bfbc">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Male" textFill="#110101" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbFemaleDash" text="100" textFill="#fa5f7e">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Female" textFill="#280202" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane layoutX="1.0" layoutY="214.0" prefHeight="533.0" prefWidth="1040.0" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="pnlDash" prefHeight="537.0" prefWidth="1040.0" style="-fx-background-color: #FFFFFF;" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="-7.0" layoutY="164.0" prefHeight="42.0" prefWidth="1047.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="Name" textFill="#110101">
+                                 <HBox.margin>
+                                    <Insets left="110.0" right="70.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="89.0" text="Location" textFill="#280202">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="91.0" layoutY="10.0" prefHeight="27.0" prefWidth="123.0" text="Zone" textFill="#280202">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="152.0" layoutY="10.0" prefHeight="17.0" prefWidth="61.0" text="Gender" textFill="#280202">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="671.0" layoutY="10.0" prefHeight="30.0" prefWidth="82.0" text="Telephone" textFill="#280202">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="732.0" layoutY="10.0" prefHeight="27.0" prefWidth="110.0" text="Date Of Birth" textFill="#280202">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="btnCloseDash" fitHeight="38.0" fitWidth="34.0" layoutX="999.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniDash" fitHeight="38.0" fitWidth="34.0" layoutX="965.0" layoutY="8.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnDashAdd" layoutX="861.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="165.0" text="ADD MEMBER">
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlMemPage" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem12" layoutX="14.0" layoutY="14.0" text="Member Details" textFill="#2c0202">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="-1.0" layoutY="55.0" prefHeight="698.0" prefWidth="1040.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="658.0" minWidth="10.0" prefWidth="658.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="382.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="478.0" minHeight="10.0" prefHeight="435.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="lbMemPic" fitHeight="225.0" fitWidth="188.0" layoutX="14.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons8_User_96px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lbMemfname" layoutX="249.0" layoutY="85.0" prefHeight="42.0" prefWidth="181.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemLname" layoutX="450.0" layoutY="89.0" prefHeight="34.0" prefWidth="172.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="249.0" layoutY="56.0" prefHeight="23.0" prefWidth="110.0" text="Personal Details" textFill="#170101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemDOB" layoutX="36.0" layoutY="364.0" prefHeight="42.0" prefWidth="242.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemLoca" layoutX="248.0" layoutY="277.0" prefHeight="42.0" prefWidth="192.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemHomeTown" layoutX="248.0" layoutY="364.0" prefHeight="42.0" prefWidth="242.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemTele" layoutX="460.0" layoutY="277.0" prefHeight="42.0" prefWidth="192.0" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemGender" layoutX="246.0" layoutY="176.0" prefHeight="42.0" prefWidth="116.0" text="MALE" textFill="#1e0202">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="460.0" layoutY="250.0" prefHeight="23.0" prefWidth="81.0" text="Telephone" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="248.0" layoutY="337.0" prefHeight="23.0" prefWidth="81.0" text="Home Town" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="337.0" prefHeight="23.0" prefWidth="81.0" text="Date of Birth" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="248.0" layoutY="250.0" prefHeight="23.0" prefWidth="81.0" text="Location" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="249.0" layoutY="153.0" prefHeight="23.0" prefWidth="81.0" text="Gender" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label layoutX="39.0" layoutY="10.0" prefHeight="23.0" prefWidth="110.0" text="Family Details" textFill="#1b0202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemDad" layoutX="126.0" layoutY="71.0" prefHeight="42.0" prefWidth="242.0" textFill="#170101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="81.0" prefHeight="23.0" prefWidth="93.0" text="Father's Name" textFill="#1e0101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="123.0" prefHeight="23.0" prefWidth="93.0" text="Mother's Name" textFill="#1e0101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemMother" layoutX="126.0" layoutY="113.0" prefHeight="42.0" prefWidth="242.0" textFill="#170101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="165.0" prefHeight="23.0" prefWidth="93.0" text="Marital Status" textFill="#1e0101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemMarried" layoutX="128.0" layoutY="155.0" prefHeight="42.0" prefWidth="168.0" textFill="#170101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemSpName" layoutX="128.0" layoutY="197.0" prefHeight="42.0" prefWidth="242.0" textFill="#170101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="206.0" prefHeight="23.0" prefWidth="93.0" text="Spouse's Name" textFill="#1e0101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemNOC" alignment="CENTER" layoutX="121.0" layoutY="240.0" prefHeight="42.0" prefWidth="56.0" textFill="#170101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="249.0" prefHeight="23.0" prefWidth="110.0" text="Children Number" textFill="#1e0101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label layoutX="42.0" prefHeight="42.0" prefWidth="160.0" text="Church Details" textAlignment="CENTER" textFill="#140101">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemZone" layoutX="175.0" layoutY="48.0" prefHeight="42.0" prefWidth="242.0" textFill="#140101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="50.0" layoutY="58.0" prefHeight="23.0" prefWidth="50.0" text="Zone" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemDOBa" layoutX="168.0" layoutY="90.0" prefHeight="42.0" prefWidth="149.0" textFill="#140101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="50.0" layoutY="99.0" prefHeight="23.0" prefWidth="100.0" text="Date Of Baptism" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="50.0" layoutY="141.0" prefHeight="23.0" prefWidth="100.0" text="Place Of Baptism" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemPOB" layoutX="168.0" layoutY="132.0" prefHeight="42.0" prefWidth="149.0" textFill="#140101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbMemNOB" layoutX="168.0" layoutY="174.0" prefHeight="42.0" prefWidth="216.0" textFill="#140101">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="50.0" layoutY="183.0" prefHeight="23.0" prefWidth="93.0" text="Bapitsed" textFill="#220202">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="btnMemDetEdit" layoutX="57.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="165.0" text="Edit Details">
+                                       <stylesheets>
+                                          <URL value="@style.css" />
+                                          <URL value="@fullpackstyling.css" />
+                                       </stylesheets>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                        <ImageView fx:id="btnMemDetClose" fitHeight="38.0" fitWidth="34.0" layoutX="1009.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMemDetMini" fitHeight="38.0" fitWidth="34.0" layoutX="975.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlHome" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem1122" layoutX="24.0" layoutY="14.0" prefHeight="35.0" prefWidth="81.0" text="Home" textFill="#0d0300">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="57.0" layoutY="156.0" prefHeight="481.0" prefWidth="891.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="489.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="485.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="240.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="150.0" layoutY="14.0" prefHeight="113.0" prefWidth="149.0">
+                                       <children>
+                                          <Label fx:id="lbHomeTotal" alignment="CENTER" prefHeight="55.0" prefWidth="154.0" text="2000" textFill="#da0b0b">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="37.0" prefWidth="166.0" text="Members" textFill="#240b05de">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="62.0" layoutY="127.0" prefHeight="92.0" prefWidth="110.0">
+                                       <children>
+                                          <Label fx:id="lbHomeMale" alignment="CENTER" prefHeight="55.0" prefWidth="112.0" text="1000" textFill="#da0b0b">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="37.0" prefWidth="112.0" text="Males" textFill="#0d0300f9">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="257.0" layoutY="127.0" prefHeight="92.0" prefWidth="110.0">
+                                       <children>
+                                          <Label fx:id="lbHomeFemale" alignment="CENTER" prefHeight="55.0" prefWidth="112.0" text="1000" textFill="#da0b0b">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="37.0" prefWidth="112.0" text="Female" textFill="#0d0300f9">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="43.0" prefHeight="121.0" prefWidth="129.0">
+                                       <children>
+                                          <Label fx:id="lbHomeZone" alignment="CENTER" prefHeight="73.0" prefWidth="131.0" text="10" textFill="#0ab9c9">
+                                             <font>
+                                                <Font size="50.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="51.0" prefWidth="130.0" text="Zones" textFill="#0d0300f9">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                        <ImageView fx:id="btnHomeMini" fitHeight="38.0" fitWidth="34.0" layoutX="975.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnHomeClose" fitHeight="38.0" fitWidth="34.0" layoutX="1009.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlAddMem" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label fx:id="lbMem1111" layoutX="21.0" layoutY="14.0" text="Add Member" textFill="#2c0202">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="btnCloseAddMem" fitHeight="38.0" fitWidth="34.0" layoutX="1000.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniAddMem" fitHeight="38.0" fitWidth="34.0" layoutX="966.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtAddfname" layoutX="307.0" layoutY="107.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="307.0" layoutY="78.0" prefHeight="17.0" prefWidth="61.0" text="First Name" textFill="#220303" />
+                        <TextField fx:id="txtAddlname" layoutX="307.0" layoutY="185.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="307.0" layoutY="156.0" prefHeight="17.0" prefWidth="61.0" text="Last Name" textFill="#220303" />
+                        <Label layoutX="307.0" layoutY="226.0" prefHeight="17.0" prefWidth="82.0" text="Date Of Birth" textFill="#220303" />
+                        <Label layoutX="14.0" layoutY="426.0" prefHeight="17.0" prefWidth="82.0" text="Home Town" textFill="#250202" />
+                        <TextField fx:id="txtAddHT" layoutX="14.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtAddOccu" layoutX="14.0" layoutY="527.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="14.0" layoutY="497.0" prefHeight="17.0" prefWidth="61.0" text="Occupation" textFill="#1b0101" />
+                        <Label layoutX="14.0" layoutY="577.0" prefHeight="17.0" prefWidth="110.0" text="Telephone Number" textFill="#1b0101" />
+                        <TextField fx:id="txtAddNum" layoutX="14.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="341.0" layoutY="426.0" prefHeight="17.0" prefWidth="82.0" text="Spouse's Name" textFill="#250202" />
+                        <Label layoutX="335.0" layoutY="577.0" prefHeight="17.0" prefWidth="81.0" text="Father's Name" textFill="#1b0101" />
+                        <Label layoutX="345.0" layoutY="501.0" prefHeight="17.0" prefWidth="89.0" text="Mother's Name" textFill="#1b0101" />
+                        <TextField fx:id="txtAddFarherName" layoutX="338.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="342.0" layoutY="347.0" prefHeight="17.0" prefWidth="81.0" text="Marrital Status" textFill="#250202" />
+                        <TextField fx:id="txtAddMotherName" layoutX="338.0" layoutY="527.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtAddSpName" layoutX="338.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="14.0" layoutY="347.0" prefHeight="17.0" prefWidth="61.0" text="Location" textFill="#250202" />
+                        <TextField fx:id="txtAddLocation" layoutX="12.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="341.0" layoutY="642.0" prefHeight="17.0" prefWidth="116.0" text="Number Of Children" textFill="#1b0101" />
+                        <TextField fx:id="txtAddChildNum" layoutX="338.0" layoutY="671.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="697.0" layoutY="347.0" prefHeight="17.0" prefWidth="89.0" text="Church Position" textFill="#110101" />
+                        <Label layoutX="697.0" layoutY="577.0" prefHeight="17.0" prefWidth="100.0" text="Place of Baptism" textFill="#110101" />
+                        <Label layoutX="697.0" layoutY="426.0" prefHeight="17.0" prefWidth="61.0" text="Zone" textFill="#110101" />
+                        <TextField fx:id="txtAddpob" layoutX="697.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="697.0" layoutY="642.0" prefHeight="17.0" prefWidth="93.0" text="Date Of Baptism" textFill="#110101" />
+                        <Label layoutX="697.0" layoutY="497.0" prefHeight="17.0" prefWidth="61.0" text="Baptised" textFill="#110101" />
+                        <TextField fx:id="txtAddChurchPo" layoutX="697.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                        <ImageView fx:id="imgAddPic" fitHeight="188.0" fitWidth="225.0" layoutX="37.0" layoutY="102.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Add_User_Male_96px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="txtAddFinger" fitHeight="165.0" fitWidth="209.0" layoutX="682.0" layoutY="152.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Fingerprint_100px_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="686.0" layoutY="116.0" prefHeight="17.0" prefWidth="110.0" text="FingerPrint  Scan" textFill="#110101" />
+                        <Label layoutX="14.0" layoutY="651.0" prefHeight="17.0" prefWidth="61.0" text="Gender" textFill="#1b0101" />
+                        <DatePicker fx:id="dtAdddob" layoutX="303.0" layoutY="259.0" prefHeight="35.0" prefWidth="305.0" />
+                        <DatePicker fx:id="dtAdddobp" layoutX="694.0" layoutY="671.0" prefHeight="35.0" prefWidth="305.0" />
+                        <Button fx:id="btnAddSave" layoutX="908.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="37.0" prefWidth="121.0" text="SAVE" textFill="#3acaee">
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="txtAddMessage" layoutX="390.0" layoutY="39.0" prefHeight="20.0" prefWidth="287.0" textFill="#ebe4e4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAddGender" layoutX="14.0" layoutY="671.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtAddZone" layoutX="698.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtAddBapt" alignment="CENTER" layoutX="698.0" layoutY="527.0" prefHeight="35.0" prefWidth="73.0" promptText="YES">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtAddMari" layoutX="338.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlEditMem" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                       <children>
+                        <Label fx:id="lbMem111" layoutX="21.0" layoutY="14.0" text="Edit Member" textFill="#2c0202">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="btnCloseEditMem" fitHeight="38.0" fitWidth="34.0" layoutX="1000.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMiniEditMem" fitHeight="38.0" fitWidth="34.0" layoutX="966.0" layoutY="-3.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mini1.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtEditfname" layoutX="307.0" layoutY="107.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="307.0" layoutY="78.0" prefHeight="17.0" prefWidth="61.0" text="First Name" textFill="#2c0202" />
+                        <TextField fx:id="txtEditlname" layoutX="307.0" layoutY="185.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="307.0" layoutY="156.0" prefHeight="17.0" prefWidth="61.0" text="Last Name" textFill="#250202" />
+                        <Label layoutX="307.0" layoutY="226.0" prefHeight="17.0" prefWidth="82.0" text="Date Of Birth" textFill="#250202" />
+                        <Label layoutX="14.0" layoutY="426.0" prefHeight="17.0" prefWidth="82.0" text="Home Town" textFill="#250202" />
+                        <TextField fx:id="txtEditHT" layoutX="14.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtEditOccu" layoutX="14.0" layoutY="527.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="14.0" layoutY="497.0" prefHeight="17.0" prefWidth="61.0" text="Occupation" textFill="#250202" />
+                        <Label layoutX="14.0" layoutY="577.0" prefHeight="17.0" prefWidth="61.0" text="Number" textFill="#250202" />
+                        <TextField fx:id="txtEditNum" layoutX="14.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="341.0" layoutY="426.0" prefHeight="17.0" prefWidth="82.0" text="Spouse Name" textFill="#1e0202" />
+                        <Label layoutX="335.0" layoutY="577.0" prefHeight="17.0" prefWidth="81.0" text="Father's Name" textFill="#1e0202" />
+                        <Label layoutX="345.0" layoutY="501.0" prefHeight="17.0" prefWidth="89.0" text="Mother's Name" textFill="#1e0202" />
+                        <TextField fx:id="txtEditFarherName" layoutX="338.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="342.0" layoutY="347.0" prefHeight="17.0" prefWidth="81.0" text="Marrital Status" textFill="#1e0202" />
+                        <TextField fx:id="txtEditMotherName" layoutX="338.0" layoutY="527.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtEditSpName" layoutX="338.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="14.0" layoutY="347.0" prefHeight="17.0" prefWidth="61.0" text="Location" textFill="#250202" />
+                        <TextField fx:id="txtEditLocation" layoutX="12.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="341.0" layoutY="642.0" prefHeight="17.0" prefWidth="116.0" text="Number Of Children" textFill="#1e0202" />
+                        <TextField fx:id="txtEditChildNum" layoutX="338.0" layoutY="671.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="697.0" layoutY="347.0" prefHeight="17.0" prefWidth="89.0" text="Church Position" textFill="#1e0202" />
+                        <Label layoutX="697.0" layoutY="577.0" prefHeight="17.0" prefWidth="100.0" text="Place of Baptism" textFill="#1e0202" />
+                        <Label layoutX="697.0" layoutY="426.0" prefHeight="17.0" prefWidth="61.0" text="Zone" textFill="#1e0202" />
+                        <TextField fx:id="txtEditpob" layoutX="697.0" layoutY="606.0" prefHeight="35.0" prefWidth="299.0" />
+                        <Label layoutX="697.0" layoutY="642.0" prefHeight="17.0" prefWidth="93.0" text="Date Of Baptism" textFill="#1e0202" />
+                        <Label layoutX="697.0" layoutY="497.0" prefHeight="17.0" prefWidth="61.0" text="Baptised" textFill="#1e0202" />
+                        <TextField fx:id="txtEditChurchPo" layoutX="697.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                        <ImageView fx:id="txtEditPic" fitHeight="188.0" fitWidth="225.0" layoutX="37.0" layoutY="102.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_User_96px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="txtEditFinger" fitHeight="165.0" fitWidth="209.0" layoutX="682.0" layoutY="152.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Fingerprint_100px_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="686.0" layoutY="116.0" prefHeight="17.0" prefWidth="110.0" text="FingerPrint  Scan" textFill="#280202" />
+                        <Button fx:id="btnEditMemUpdate" layoutX="922.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="36.0" prefWidth="110.0" text="Update">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@fullpackstyling.css" />
+                           </stylesheets>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="651.0" prefHeight="17.0" prefWidth="61.0" text="Gender" textFill="#250202" />
+                        <DatePicker fx:id="dtDOB" layoutX="303.0" layoutY="259.0" prefHeight="42.0" prefWidth="305.0" />
+                        <DatePicker fx:id="dtDOBp" layoutX="695.0" layoutY="668.0" prefHeight="42.0" prefWidth="305.0" />
+                        <Label fx:id="lbEditError" layoutX="362.0" layoutY="38.0" prefHeight="20.0" prefWidth="275.0" />
+                        <TextField fx:id="txtEditMarri" layoutX="338.0" layoutY="376.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtEditGender" layoutX="14.0" layoutY="671.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtEditZone" layoutX="697.0" layoutY="455.0" prefHeight="35.0" prefWidth="299.0" />
+                        <TextField fx:id="txtEditBapt" layoutX="698.0" layoutY="527.0" prefHeight="35.0" prefWidth="89.0" promptText="YES">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="256.0" style="-fx-background-color: #007FFF;">
+               <children>
+                  <ImageView fitHeight="114.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../church.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="40.0" top="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="259.0" style="-fx-background-color: #007FFF;" stylesheets="@style.css" text="Home" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Church_50px_3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="259.0" style="-fx-background-color: #007FFF;" stylesheets="@style.css" text="Members" textFill="#2c2525" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Leadership_50px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAttend" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="259.0" style="-fx-background-color: #007FFF;" stylesheets="@style.css" text="Attendance" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Attendance_50px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnZone" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="393.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="60.0" prefWidth="259.0" style="-fx-background-color: #007FFF;" stylesheets="@style.css" text="Zone" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_Myspace_3_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
